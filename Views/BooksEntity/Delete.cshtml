@@ -1,0 +1,38 @@
+﻿@model RepositoryPattern.Models.BooksEntity.BooksTable
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>BooksTable</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">Author</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Author)
+    </div>
+
+    <div class="display-label">Category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category)
+    </div>
+
+    <div class="display-label">Series</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Series)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

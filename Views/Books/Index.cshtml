@@ -1,0 +1,26 @@
+﻿@model IEnumerable<RepositoryPattern.Models.BooksLinq.BooksIRead>
+
+@{
+    ViewBag.Title = "Books";
+}
+
+<h2>Books that I've read in the past year or so.</h2>
+
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Series</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>@item.Title</td>
+        <td>@item.Author</td>
+        <td>@item.Category</td>
+        <td>@item.Series</td>
+    </tr>
+}
+</table>

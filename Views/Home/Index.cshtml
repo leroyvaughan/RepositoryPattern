@@ -1,0 +1,28 @@
+﻿@using RepositoryPattern.Models
+@using System.Collections;
+
+@{
+    ViewBag.Title = "Books I read in the past year or so";
+}
+
+<h2>@ViewBag.Message</h2>
+<div>
+Click on the Books Menu Item in the Top Nav...
+@*    <table>
+        <tr>
+            <td>TITLE</td>
+            <td>AUTHOR</td>
+            <td>CATEGORY</td>
+        </tr>
+        @{
+            foreach (BooksIRead b in (IEnumerable)ViewData.Model)
+            {
+                <tr>
+                    <td>@b.Title</td>
+                    <td>@b.Author</td>
+                    <td>@b.Category</td>
+                </tr>
+            }
+        }
+    </table>*@
+</div>
